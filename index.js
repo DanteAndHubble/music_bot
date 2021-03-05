@@ -3,7 +3,7 @@ const Discord = require('discord.js'),
 	client = new Discord.Client(),
 	config = {
 		prefix: "!",
-		token: process.env.TOKEN || "NzY3ODAzOTMyNjY3ODA1NzM2.X43PIg.PNuDLaEMNvAUwhXeELYlwzPvXDQ"
+		
 	};
 const distube = new DisTube(client, { searchSongs: false, emitNewSongOnly: true });
 
@@ -85,4 +85,4 @@ client.on("message", async (message) => {
     }
 });
 
-client.login(config.token);
+client.login(process.env.token);
